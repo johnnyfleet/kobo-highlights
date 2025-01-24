@@ -1,3 +1,7 @@
+# Specific to this project
+/book_annotations/
+annotations.md
+
 # Custom - ignore csv outputs
 *.csv
 
