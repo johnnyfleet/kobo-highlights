@@ -1,27 +1,17 @@
-# jupyter-python-template
-Template project to configure codespaces for use with jupyter - redacting
-results on commit.
+# Kobo Highlights
 
-## Configuration
-This template project has the following set up to make easier to clone and get
-going messing around with Python and Jupyter.
+This project is a quick and dirty way to extract annotations from Kobo reader with the help of [Kobuddy](https://github.com/karlicoss/kobuddy)
 
-- Devcontainer set up with
-  - Python 3.11
-  - Poetry
-- Extensions
-  - Jupyter renderers
-  - Jupyter
-  - Copilot
-  - Markdown lint
-  - github pull requests
-- Auto installs poetry dependencies on devcontainer start
-- Configures Jupyter notebook to be ready to go.
-- Configures git to remove the output of Jupyter runs before committing
-to ensure no sensitive output is saved in commits (e.g. results of data
-used in an execution step).
+I normally use October but found the ordering of annotations infuriating to simplify my notes.
 
-## Initalisation
+## Outputs
+It extracts the annotations/highlights into:
+- CSV file
+- Single markdown file with all annotations grouped by book
+- Individual markdown files, one for each book, in the book_annotations folder.
 
-Once cloned from template - make sure to create poetry pyproject.toml with
-`poetry init` before starting devcontainer.
+## Pre-requisites
+- Install kobuddy (I just cloned)
+- `./kobuddy annotations >> annotations.txt`
+- put that annotations file into the root of this project
+- Run the jupyter notebook
